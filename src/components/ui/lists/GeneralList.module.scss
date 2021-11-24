@@ -1,4 +1,12 @@
+@import "../../../assets/styles/config/mixins";
+
 section.general-list {
   width: 340px;
   height: 100%;
+
+  overflow: auto;
+
+  @include mobile {
+    width: auto;
+  }
 }

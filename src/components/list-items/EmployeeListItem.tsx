@@ -3,24 +3,22 @@ import React from "react";
 
 import styles from "./EmployeeListItem.module.scss";
 import Employee from "../../models/employee";
+import GeneratedAvatar from "../ui/avatars/GeneratedAvatar";
 
 type employeeListItemType = {
   name: Employee["name"];
   role: Employee["role"];
-  avatar: Employee["avatar"];
+  color: Employee["theme"]["primaryColor"];
 };
 
 const EmployeeListItem: React.FC<employeeListItemType> = ({
   name,
   role,
-  avatar,
+  color,
 }) => {
   return (
     <div className={styles["employee-list-item"]}>
-      <div
-        className={styles.avatar}
-        style={{ backgroundImage: `url(${avatar})` }}
-      />
+      <GeneratedAvatar className={styles.avatar} name={name} color={color} />
       <div className="body">
         <h2>{name}</h2>
         <p>{role}</p>
