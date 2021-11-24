@@ -1,0 +1,23 @@
+@import "./assets/styles/config/mixins";
+
+.app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  @include mobile {
+    position: initial;
+    height: auto;
+  }
+
+  .centered-container {
+    height: 100%;
+    padding-top: var(--unit);
+    padding-bottom: var(--unit);
+
+    @include mobile {
+      height: auto;
+      padding: 0;
+    }
+  }
+}
