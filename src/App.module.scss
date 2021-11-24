@@ -20,4 +20,10 @@
       padding: 0;
     }
   }
+
+  .main-container {
+    flex: 1;
+    border-left: var(--light-border);
+    border-right: var(--light-border);
+  }
 }
