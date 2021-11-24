@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
 
-  @include mobile {
+  @include desktopxl-down {
     position: initial;
     height: auto;
   }
@@ -15,7 +15,7 @@
     padding-top: var(--unit);
     padding-bottom: var(--unit);
 
-    @include mobile {
+    @include desktopxl-down {
       height: auto;
       padding: 0;
     }

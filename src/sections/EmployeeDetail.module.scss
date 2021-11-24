@@ -1,2 +1,55 @@
+@import "../assets/styles/config/mixins";
+
 section.employee-detail {
+  header {
+    display: flex;
+    align-items: center;
+    padding: 12rem var(--unit-l) var(--unit-xxl);
+
+    .avatar {
+      min-width: 12rem;
+      min-height: 12rem;
+      width: 12rem;
+      height: 12rem;
+      margin-right: var(--unit-xl);
+    }
+
+    h1,
+    h2 {
+      color: #1e1e1e;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    @include mobile {
+      padding: var(--unit-xxl) var(--unit) var(--unit-l);
+
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+        margin-right: var(--unit);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .text-holder {
+    max-width: 780px;
+    padding: var(--unit-xl) var(--unit-l);
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    @include mobile {
+      padding: var(--unit-l) var(--unit);
+    }
+  }
 }

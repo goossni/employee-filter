@@ -15,19 +15,19 @@ type Colors = {
 const UI_COLORS: Colors = {
   RED: {
     primaryColor: "F74140",
-    secondaryColor: "FFC581",
+    secondaryColor: "FA8D8D",
   },
   ORANGE: {
     primaryColor: "FF9F2C",
-    secondaryColor: "FA8D8D",
+    secondaryColor: "FFC581",
   },
   GREEN: {
     primaryColor: "16CB49",
-    secondaryColor: "73BCFF",
+    secondaryColor: "74E092",
   },
   BLUE: {
     primaryColor: "168FFF",
-    secondaryColor: "74E092",
+    secondaryColor: "73BCFF",
   },
 };
 

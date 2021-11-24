@@ -6,7 +6,7 @@ section.general-list {
 
   overflow: auto;
 
-  @include mobile {
+  @include desktopxl-down {
     width: auto;
   }
 }

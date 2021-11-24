@@ -4,18 +4,22 @@ import styles from "./GeneratedAvatar.module.scss";
 type generatedAvatarType = {
   name: string;
   color?: string;
+  textColor?: string;
   className?: string;
 };
 
 const GeneratedAvatar: React.FC<generatedAvatarType> = ({
   name,
   color,
+  textColor,
   className,
 }) => {
   const imageUrl = `https://eu.ui-avatars.com/api/?name=${name.replace(
     " ",
     "+"
-  )}&background=${color ? color : "random"}`;
+  )}&background=${color ? color : "random"}${
+    textColor ? `&color=${textColor}` : ""
+  }`;
 
   return (
     <div
