@@ -5,6 +5,7 @@
 body {
   padding: 0;
   margin: 0;
+  background: #121212;
 }
 
 h1,
@@ -18,11 +19,4 @@ p {
 section,
 .page {
   display: block;
-}
-
-.container {
-  position: relative;
-  max-width: calc(1200px + var(--unit) * 2);
-  margin: 0 auto;
-  padding: 0 var(--unit);
 }
