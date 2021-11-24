@@ -1,0 +1,44 @@
+.employee-list-item {
+  display: flex;
+  align-items: center;
+
+  padding: var(--unit-s) var(--unit);
+
+  border-bottom: var(--light-border);
+
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .avatar {
+    width: calc(var(--unit-xl) + 0.5rem);
+    height: calc(var(--unit-xl) + 0.5rem);
+    margin-right: var(--unit-s);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 100%;
+  }
+
+  h2 {
+    font-size: calc(var(--unit) + 0.25rem);
+  }
+
+  p {
+    font-size: var(--unit);
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+  }
+}
