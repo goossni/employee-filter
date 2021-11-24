@@ -1,0 +1,25 @@
+.employee-list {
+  .input-holder {
+    display: flex;
+    align-items: center;
+    padding: var(--unit-xs) var(--unit);
+
+    background-color: rgba(0, 0, 0, 0.25);
+
+    border-bottom: var(--light-border);
+
+    .icon {
+      margin-right: var(--unit-s);
+    }
+
+    input {
+      width: 100%;
+      height: var(--unit-xl);
+
+      color: white;
+
+      background: transparent;
+      border: none;
+    }
+  }
+}
