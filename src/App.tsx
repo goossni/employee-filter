@@ -1,13 +1,13 @@
-import CenteredContainer from "./components/ui/CenteredContainer";
+import CentredContainer from "./components/ui/CentredContainer";
 import styles from "./App.module.scss";
 import MainContainer from "./components/ui/MainContainer.module";
 
 function App() {
   return (
     <div className={styles.app}>
-      <CenteredContainer className={styles["centered-container"]}>
+      <CentredContainer className={styles["centred-container"]}>
         <MainContainer></MainContainer>
-      </CenteredContainer>
+      </CentredContainer>
     </div>
   );
 }
