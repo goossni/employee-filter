@@ -28,6 +28,24 @@ const SelectedEmployeeList = () => {
             />
           );
 
+          const toggleElement = (
+            <>
+              {employee.skills.map((skill, index) => (
+                <div className={styles["toggle-container-item"]} key={index}>
+                  <h4>{skill.title}</h4>
+                  <p>
+                    {skill.values.map(
+                      (value, index) =>
+                        `${value}${
+                          index + 1 !== skill.values.length ? ", " : ""
+                        }`
+                    )}
+                  </p>
+                </div>
+              ))}
+            </>
+          );
+
           return (
             <div key={employee.id} className={styles["list-item-container"]}>
               <MaterialIcon
@@ -39,6 +57,7 @@ const SelectedEmployeeList = () => {
                 title={employee.name}
                 subtitle={employee.role}
                 sideElement={avatar}
+                toggleElement={toggleElement}
               />
             </div>
           );

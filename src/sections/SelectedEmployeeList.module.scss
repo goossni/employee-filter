@@ -44,9 +44,15 @@
         }
       }
     }
+
+    .toggle-container-item {
+      margin-bottom: var(--unit-xs);
+    }
   }
 
   .avatar {
+    min-width: calc(var(--unit-xl) + 0.5rem);
+    min-height: calc(var(--unit-xl) + 0.5rem);
     width: calc(var(--unit-xl) + 0.5rem);
     height: calc(var(--unit-xl) + 0.5rem);
     margin-right: var(--unit-s);

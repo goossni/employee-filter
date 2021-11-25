@@ -23,6 +23,23 @@ export const EmployeesContext = React.createContext<employeeContextType>({
 const EmployeesContextProvider: React.FC = ({ children }) => {
   const [employees] = useState<Employee[]>([
     new Employee(
+      "1",
+      "Nick Goossens",
+      "Frontend Developer",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum turpis quis tellus malesuada tempus. Donec eu congue ipsum, ut vehicula lectus. Integer ultricies tellus eu mauris fermentum, at luctus elit luctus. Nam sed eleifend arcu. Donec a dolor vel erat sagittis facilisis quis at mauris. Donec vitae.",
+      [
+        {
+          title: "Soft Skills",
+          values: ["Direct", "Teamplayer", "Communicative"],
+        },
+        {
+          title: "Technical Skills",
+          values: ["React", "Vue.js"],
+        },
+      ],
+      UI_COLORS.RED
+    ),
+    new Employee(
       "2",
       "Simon Buysse",
       "Frontend Developer",
@@ -57,19 +74,6 @@ const EmployeesContextProvider: React.FC = ({ children }) => {
       UI_COLORS.ORANGE
     ),
     new Employee(
-      "6",
-      "Bart Haedens",
-      "Business Director Digital Experiences & Front-end",
-      "Test test 123.",
-      [
-        {
-          title: "Soft Skills",
-          values: ["Lorem", "Ipsum"],
-        },
-      ],
-      UI_COLORS.GREEN
-    ),
-    new Employee(
       "4",
       "Eline Van Gelder",
       "UX Designer",
@@ -87,6 +91,32 @@ const EmployeesContextProvider: React.FC = ({ children }) => {
       UI_COLORS.ORANGE
     ),
     new Employee(
+      "5",
+      "Lode De Bot",
+      "Resource Manager",
+      "Test test 123.",
+      [
+        {
+          title: "Soft Skills",
+          values: ["Lorem", "Ipsum"],
+        },
+      ],
+      UI_COLORS.GREEN
+    ),
+    new Employee(
+      "6",
+      "Bart Haedens",
+      "Business Director Digital Experiences & Front-end",
+      "Test test 123.",
+      [
+        {
+          title: "Soft Skills",
+          values: ["Lorem", "Ipsum"],
+        },
+      ],
+      UI_COLORS.GREEN
+    ),
+    new Employee(
       "7",
       "Jane Doe",
       "Cleaning Lady",
@@ -99,36 +129,6 @@ const EmployeesContextProvider: React.FC = ({ children }) => {
         { title: "Martial Arts", values: ["Karate", "Judo"] },
       ],
       UI_COLORS.BLUE
-    ),
-    new Employee(
-      "1",
-      "Nick Goossens",
-      "Frontend Developer",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum turpis quis tellus malesuada tempus. Donec eu congue ipsum, ut vehicula lectus. Integer ultricies tellus eu mauris fermentum, at luctus elit luctus. Nam sed eleifend arcu. Donec a dolor vel erat sagittis facilisis quis at mauris. Donec vitae.",
-      [
-        {
-          title: "Soft Skills",
-          values: ["Direct", "Teamplayer", "Communicative"],
-        },
-        {
-          title: "Technical Skills",
-          values: ["React", "Vue.js"],
-        },
-      ],
-      UI_COLORS.RED
-    ),
-    new Employee(
-      "5",
-      "Lode De Bot",
-      "Resource Manager",
-      "Test test 123.",
-      [
-        {
-          title: "Soft Skills",
-          values: ["Lorem", "Ipsum"],
-        },
-      ],
-      UI_COLORS.GREEN
     ),
     new Employee(
       "8",
