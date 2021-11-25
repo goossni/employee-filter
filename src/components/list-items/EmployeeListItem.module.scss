@@ -8,6 +8,7 @@
 
   cursor: pointer;
   transition: background-color 0.4s;
+  user-select: none;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.25);
@@ -18,6 +19,8 @@
   }
 
   .avatar {
+    min-width: calc(var(--unit-xl) + 0.5rem);
+    min-height: calc(var(--unit-xl) + 0.5rem);
     width: calc(var(--unit-xl) + 0.5rem);
     height: calc(var(--unit-xl) + 0.5rem);
     margin-right: var(--unit-s);

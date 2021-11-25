@@ -14,7 +14,7 @@ const GeneratedAvatar: React.FC<generatedAvatarType> = ({
   textColor,
   className,
 }) => {
-  const imageUrl = `https://eu.ui-avatars.com/api/?name=${name.replace(
+  const imageUrl = `https://eu.ui-avatars.com/api/?name=${name.replaceAll(
     " ",
     "+"
   )}&background=${color ? color : "random"}${

@@ -5,19 +5,21 @@ type materialIconType = {
   face: string;
   theme?: string;
   className?: string;
+  onClick?: () => void;
 };
 
 const MaterialIcon: React.FC<materialIconType> = ({
   face,
   theme = "light",
   className,
+  onClick,
 }) => {
-  console.log(styles);
   return (
     <span
       className={`material-icons ${className && className} ${
         styles["material-icons"]
       } ${styles[theme]}`}
+      onClick={onClick}
     >
       {face}
     </span>

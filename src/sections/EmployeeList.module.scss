@@ -14,4 +14,10 @@
       border: none;
     }
   }
+
+  .fallback-message {
+    margin-left: var(--unit-s);
+    margin-top: var(--unit-s);
+    font-size: 0.8rem;
+  }
 }
