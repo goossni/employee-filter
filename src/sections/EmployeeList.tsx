@@ -1,20 +1,26 @@
 import GeneralList from "../components/ui/lists/GeneralList";
-import React from "react";
+import React, { useContext, useState } from "react";
 
 import styles from "./EmployeeList.module.scss";
 import EmployeeListItem from "../components/list-items/EmployeeListItem";
 import MaterialIcon from "../components/ui/icons/MaterialIcon";
 import Topbar from "../components/ui/containers/Topbar";
-import Employee from "../models/employee";
-import UI_COLORS from "../constants/ui-colors";
+
+import { EmployeesContext } from "../store/employees-context";
 
 const EmployeeList: React.FC = () => {
-  const employees: Employee[] = [
-    new Employee("1", "Nick Goossens", "Frontend Developer", UI_COLORS.RED),
-    new Employee("2", "Simon Buyssen", "Frontend Developer", UI_COLORS.ORANGE),
-    new Employee("3", "John Doe", "Projectmanager", UI_COLORS.GREEN),
-    new Employee("4", "Jane Doe", "Designer", UI_COLORS.BLUE),
-  ];
+  const employeeContext = useContext(EmployeesContext);
+  const { employees, setActiveId } = employeeContext;
+
+  const [filter, setFilter] = useState("");
+
+  const inputHandler = (e: React.FormEvent<HTMLInputElement>) => {
+    setFilter(e.currentTarget.value);
+  };
+
+  const filteredEmployees = employees.filter((employee) =>
+    employee.name.toLowerCase().includes(filter.toLowerCase())
+  );
 
   return (
     <GeneralList className={styles["employee-list"]}>
@@ -25,18 +31,25 @@ const EmployeeList: React.FC = () => {
           name="filter"
           id="filter"
           placeholder="Search for an employee..."
+          value={filter}
+          onChange={inputHandler}
         />
       </Topbar>
-      {employees.map((employee) => {
-        return (
-          <EmployeeListItem
-            key={employee.id}
-            name={employee.name}
-            role={employee.role}
-            color={employee.theme.primaryColor}
-          />
-        );
-      })}
+      {filteredEmployees.length === 0 ? (
+        <p className={styles["fallback-message"]}>No employees found.</p>
+      ) : (
+        filteredEmployees.map((employee) => {
+          return (
+            <EmployeeListItem
+              key={employee.id}
+              name={employee.name}
+              role={employee.role}
+              color={employee.theme.primaryColor}
+              onClick={() => setActiveId(employee.id)}
+            />
+          );
+        })
+      )}
     </GeneralList>
   );
 };
