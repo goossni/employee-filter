@@ -1,0 +1,23 @@
+.employee-list {
+  .input-holder {
+    .icon {
+      margin-right: var(--unit-s);
+    }
+
+    input {
+      width: 100%;
+      height: var(--unit-xl);
+
+      color: white;
+
+      background: transparent;
+      border: none;
+    }
+  }
+
+  .fallback-message {
+    margin-left: var(--unit-s);
+    margin-top: var(--unit-s);
+    font-size: 0.8rem;
+  }
+}

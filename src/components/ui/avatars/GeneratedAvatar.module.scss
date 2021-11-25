@@ -1,0 +1,12 @@
+.avatar {
+  min-width: var(--unit-xl);
+  min-height: var(--unit-xl);
+  width: var(--unit-xl);
+  height: var(--unit-xl);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 100%;
+}

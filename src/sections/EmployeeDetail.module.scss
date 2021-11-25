@@ -1,0 +1,124 @@
+@import "../assets/styles/config/mixins";
+
+section.employee-detail {
+  position: relative;
+  header {
+    display: flex;
+    align-items: center;
+    padding: 12rem var(--unit-l) var(--unit-xxl);
+
+    .avatar {
+      min-width: 12rem;
+      min-height: 12rem;
+      width: 12rem;
+      height: 12rem;
+      margin-right: var(--unit-xl);
+    }
+
+    h1,
+    h2 {
+      color: #1e1e1e;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    @include mobile {
+      padding: var(--unit-xxl) var(--unit) var(--unit-l);
+
+      .avatar {
+        min-width: 5rem;
+        min-height: 5rem;
+        width: 5rem;
+        height: 5rem;
+        margin-right: var(--unit);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--unit-xl) var(--unit-l);
+
+    @include mobile {
+      padding: var(--unit-l) var(--unit);
+    }
+
+    @include desktopxl-down {
+      display: block;
+    }
+
+    h2 {
+      margin-bottom: var(--unit-xs);
+    }
+
+    .text-holder {
+      flex: 1;
+
+      p {
+        font-size: 0.85rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      @include desktopxl-down {
+        margin-bottom: var(--unit);
+      }
+    }
+
+    .skills-holder {
+      margin-left: var(--unit);
+      max-width: 33%;
+      width: 100%;
+
+      @include desktopxl-down {
+        margin-left: 0;
+        max-width: 100%;
+      }
+
+      .skills-container {
+        margin-bottom: var(--unit);
+
+        ul {
+          margin: 0;
+          padding-left: 2rem;
+
+          li {
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    .button-holder {
+      width: 100%;
+    }
+  }
+
+  .fallback-message {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+
+    @include desktopxl-up {
+      @include center;
+    }
+
+    @include desktopxl-down {
+      padding: 5rem var(--unit);
+    }
+
+    .fallback-message-icon {
+      display: block;
+      margin-bottom: var(--unit-xxs);
+      font-size: var(--unit-xl);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
