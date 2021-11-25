@@ -4,8 +4,6 @@ section.general-list {
   width: 340px;
   height: 100%;
 
-  overflow: auto;
-
   @include desktopxl-down {
     width: auto;
   }

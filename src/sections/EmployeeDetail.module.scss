@@ -27,6 +27,8 @@ section.employee-detail {
       padding: var(--unit-xxl) var(--unit) var(--unit-l);
 
       .avatar {
+        min-width: 5rem;
+        min-height: 5rem;
         width: 5rem;
         height: 5rem;
         margin-right: var(--unit);
@@ -38,18 +40,57 @@ section.employee-detail {
     }
   }
 
-  .text-holder {
-    max-width: 780px;
+  .body {
+    display: flex;
     padding: var(--unit-xl) var(--unit-l);
-
-    p {
-      font-size: 0.85rem;
-      font-weight: 300;
-      line-height: 1.5;
-    }
 
     @include mobile {
       padding: var(--unit-l) var(--unit);
+    }
+
+    @include desktopxl-down {
+      display: block;
+    }
+
+    h2 {
+      margin-bottom: var(--unit-xs);
+    }
+
+    .text-holder {
+      flex: 1;
+
+      p {
+        font-size: 0.85rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      @include desktopxl-down {
+        margin-bottom: var(--unit);
+      }
+    }
+
+    .skills-holder {
+      margin-left: var(--unit);
+      max-width: 33%;
+      width: 100%;
+
+      @include desktopxl-down {
+        margin-left: 0;
+        max-width: auto;
+      }
+
+      .skills-container {
+        margin-bottom: var(--unit);
+
+        ul {
+          margin: 0;
+
+          li {
+            line-height: 1.5;
+          }
+        }
+      }
     }
   }
 }

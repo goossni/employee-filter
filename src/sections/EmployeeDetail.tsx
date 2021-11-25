@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import GeneratedAvatar from "../components/ui/avatars/GeneratedAvatar";
+import UI_COLORS from "../constants/ui-colors";
 import Employee from "../models/employee";
+import { EmployeesContext } from "../store/employees-context";
 
 import styles from "./EmployeeDetail.module.scss";
 
 type employeeDetailType = {
   className?: string;
-  name: Employee["name"];
-  role: Employee["role"];
-  theme: Employee["theme"];
 };
 
-const EmployeeDetail: React.FC<employeeDetailType> = ({
-  className,
-  name,
-  role,
-  theme,
-}) => {
+const EmployeeDetail: React.FC<employeeDetailType> = ({ className }) => {
+  const employeeContext = useContext(EmployeesContext);
+  const { theme, name, role } = {
+    name: "Nick Goossens",
+    role: "Frontend Developer",
+    theme: UI_COLORS.RED,
+  };
+
   return (
     <section
       className={`${styles["employee-detail"]} ${className && className}`}
@@ -37,8 +38,9 @@ const EmployeeDetail: React.FC<employeeDetailType> = ({
           <h2>{role}</h2>
         </div>
       </header>
-      <div className="body">
+      <div className={styles.body}>
         <div className={styles["text-holder"]}>
+          <h2>Description</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
             elementum turpis quis tellus malesuada tempus. Donec eu congue
@@ -54,6 +56,23 @@ const EmployeeDetail: React.FC<employeeDetailType> = ({
             Donec quis dignissim felis. Nulla sed congue dui, id dignissim
             sapien.
           </p>
+        </div>
+        <div className={styles["skills-holder"]}>
+          <div className={styles["skills-container"]}>
+            <h2>Soft Skills</h2>
+            <ul>
+              <li>Direct</li>
+              <li>Personal</li>
+              <li>Flexible</li>
+            </ul>
+          </div>
+          <div className={styles["skills-container"]}>
+            <h2>Technical Skills</h2>
+            <ul>
+              <li>React</li>
+              <li>Vue.js</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
