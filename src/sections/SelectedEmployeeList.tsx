@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AccordeonListItem from "../components/list-items/AccordeonListItem";
 import GeneratedAvatar from "../components/ui/avatars/GeneratedAvatar";
+import Button from "../components/ui/buttons/Button";
 import Topbar from "../components/ui/containers/Topbar";
 import MaterialIcon from "../components/ui/icons/MaterialIcon";
 import GeneralList from "../components/ui/lists/GeneralList";
@@ -62,6 +63,9 @@ const SelectedEmployeeList = () => {
             </div>
           );
         })}
+        <Button className={styles["submit-button"]} onClick={() => {}}>
+          Submit Team
+        </Button>
       </GeneralList>
     );
   }

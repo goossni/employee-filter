@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# Bold - React Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This exercise exists to test your **HTML**, **CSS**, **JavaScript** and **React** knowledge.
+You will receive (a specific amount of time) to do this exercise. Don't worry if you're unable to finish the entire thing, that way we can see what elements you prioritize. You will however be asked to explain how you would finish this exercise and why you would execute it that way.
 
-## Available Scripts
+When you're done with the exercise, please push it to [Github](https://github.com/), [Bitbucket](https://bitbucket.org/), [Gitlab](https://gitlab.com/) or a platform of your own choice and share it publicly so we can evaluate it.
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Requirements](#requirements)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The goal of this application is to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Manage a list of employees
+- View details of an employee
+- Add them to a team
+- Upload that team through an API call
 
-### `npm test`
+Styling-wise we would like you to approach the layout of the examples below.
+It does not have to be pixel perfect or use the exact same colours but it's important for us to see you can remake the broad elements of a design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Intial State](docs/images/intial-state.png)
+![End Result](docs/images/end-result.png)
 
-### `npm run build`
+## Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Must Haves
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- A filterable list of employees
+- A section that contains the details of a selected employee
+- A list of selected employees
+- A way to delete selected employees from that list
+- Use SASS, CSS modules or styled-components to build your UI. (You can also use another option you prefer, if you can justify your choice.)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Should Haves
 
-### `npm run eject`
+- A GET API request that fetches employee data
+- A POST API request that uploads the selected team
+- A message to the user when no one has been selected
+- A message to the user when there's no results found while filtering
+- Hide the "selected employees" list when there's no items available
+- Limited the "selected employees" list to a maximum of 5 people
+- Disable the user from adding someone to the list twice
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Could Haves
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Create the project in TypeScript
+- Implement a theme for employees based on their role (eg: red for developer, orange for design, etc.)
+- Turn the selected employee list items into accordion elements that can close and open when clicked
+- Add hover and click animations to interactable elements

@@ -9,8 +9,7 @@ import Topbar from "../components/ui/containers/Topbar";
 import { EmployeesContext } from "../store/employees-context";
 
 const EmployeeList: React.FC = () => {
-  const employeeContext = useContext(EmployeesContext);
-  const { employees, setActiveId } = employeeContext;
+  const { employees, setActiveId } = useContext(EmployeesContext);
 
   const [filter, setFilter] = useState("");
 
