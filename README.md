@@ -20,7 +20,7 @@ The goal of this application is to:
 Styling-wise we would like you to approach the layout of the examples below.
 It does not have to be pixel perfect or use the exact same colours but it's important for us to see you can remake the broad elements of a design.
 
-![Intial State](docs/images/intial-state.png)
+![Intial State](docs/images/initial-state.png)
 ![End Result](docs/images/end-result.png)
 
 ## Requirements
